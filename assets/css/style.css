@@ -1,11 +1,16 @@
 /*Set margin to 0 to ensure the header and banner section do not get cut short and reach both ends of the webpage*/
+
 body {
     margin: 0;
     background-color: papayawhip;
 }
 
+
 /*Set the header to flex to ensure that the navigation links can be positioned on the right side*/
+
+
 /*Set the header to relative so the h1 can be positioned freely to where I desire*/
+
 header {
     background: linear-gradient(45deg, black, transparent);
     display: flex;
@@ -14,7 +19,9 @@ header {
     justify-content: end;
 }
 
+
 /*Set h1 as absolute so that I may freely position it without concern of alignment issues with the nav links*/
+
 h1 {
     background-color: silver;
     font-size: 40px;
@@ -27,14 +34,18 @@ h1 {
     padding: 0px 40px 0 40px;
 }
 
+
 /*Ensure to remove the bullet points before the nav links for a more aesthetically pleasing view*/
+
 nav {
     display: flex;
     align-items: center;
     list-style: none;
 }
 
+
 /*Ensure there is enough space between the nav links so they are not bunched up on one another*/
+
 nav li {
     margin-right: 10px;
     font-size: 25px;
@@ -42,12 +53,17 @@ nav li {
 
 
 /*Set figure to relative in order to freely position the contents I intend to put into it without concern over sizing issues*/
+
 figure {
     position: relative;
 }
 
+
 /*Set profile picture as absolute in order to freely position it to where I so desire including when setting up resizing settings*/
+
+
 /*Resize the profile picture via css instead of an image editor to gain more comfort with css settings*/
+
 #profile-pic {
     height: 150px;
     position: absolute;
@@ -55,7 +71,9 @@ figure {
     left: 15px;
 }
 
+
 /*Set banner caption as absolute to once again freely position it to where I so desire*/
+
 figure h2 {
     font-size: 50px;
     color: black;
@@ -65,8 +83,12 @@ figure h2 {
     bottom: 0;
 }
 
+
 /*Incorporate "awe-inspiring" background image*/
+
+
 /*Ensure image is set and does not repeat itself [a problem that reoccured during resizing]*/
+
 .feature-banner {
     background-image: url(../images/space-banner.jpg);
     background-size: cover;
@@ -75,13 +97,19 @@ figure h2 {
     height: 200px;
 }
 
+
 /*Adjust width of main section to avoid the look of being "stretched out" and squeeze the content in a little more*/
+
 .align-border {
     max-width: 95%;
 }
 
+
 /*Establish each section in main as flex in order to better position and align the content contained within*/
+
+
 /*Position the content within the flex containers so that the "headers" [About me, My Work, and Contact Me] are on the left and the content on the right*/
+
 section {
     margin: 20px;
     padding: 10px;
@@ -90,14 +118,18 @@ section {
     text-align: center;
 }
 
+
 /*Manually establish the flex basis in order to provide space between the content so content does not proverbially sit on top of one another*/
+
 section h2 {
     flex: 0 0 15%;
     border-right: solid 4px;
     font-size: 20px;
 }
 
+
 /*Manually establish the flex basis again so that there are not any significant spacing issues between the content and the header of each flex row*/
+
 section li {
     font-size: 25px;
     display: flex;
@@ -105,21 +137,27 @@ section li {
     flex: 0 0 17%;
 }
 
+
 /*Adjust font setting over the work section in order to prevent eye strain as default size of links were significantly small*/
+
 section div {
     font-size: 30px;
     font-family: serif;
     font-style: oblique;
 }
 
+
 /*Make all links contained within more aesthetically pleasing*/
+
 a {
-    color: teal;
+    color: darkorange;
     padding: 10px;
     margin: 5px;
 }
 
+
 /*Establish a grid container similar to the one displayed in the example image provided with the portfolio project instruction*/
+
 .grid-box {
     display: grid;
     column-gap: 10px;
@@ -128,15 +166,26 @@ a {
     flex: 0 0 80%;
 }
 
+
 /*Adjust the sizing of the grid boxes so that they are spaced out in a similar fashion to the example image provided*/
+
 .grid-item {
+    border: 5px solid;
     grid-column: span 4;
+    min-height: 100px;
     display: flex;
     align-items: flex-end;
-    background-size: 125%;
+    padding: 0 0 20px 0;
+    text-decoration: none;
+    background-blend-mode: soft-light;
+    background-size: 150%;
+    transition: all 0.5s;
+    font-size: 25px;
 }
 
+
 /*Adjust the settings of the first box to ensure it is the largest one of the entire grid container*/
+
 .movie-roulette {
     background-image: url(../images/project-1-screenshot.png);
     background-size: auto;
@@ -145,8 +194,12 @@ a {
     grid-row: span 3;
 }
 
+
 /*Provide background image for each coming soon section*/
+
+
 /*Once again ensure that the image does not repeat itself [problem that occured during resizing]*/
+
 .weather-tracker {
     background-image: url(../images/port-6-screenshot.png);
     background-size: 100%;
@@ -171,50 +224,55 @@ a {
     background-repeat: no-repeat;
 }
 
+
 /*Manually establish the flex basis in order to provide space between the content so it is not too close to the header portion of the flex row*/
+
 p {
     flex: 0 0 80%;
     font-size: 20px;
 }
 
+
 /*Remove the underline that is defaulted when establishing links*/
+
 a {
     text-decoration: none;
 }
 
+
 /*Provide underline of links on hover for design*/
+
 a:hover {
     text-decoration: underline;
 }
 
+
 /*Establish settings for smaller screens*/
+
+
 /*Make the content of the site to be more inline when on a smaller screen mimicking that of an individual scrolling a page on their phone*/
+
 @media screen and (max-width: 768px) {
     header {
         justify-content: center;
-        text-align:center;
+        text-align: center;
         padding: 7% 0 0;
     }
-
     h1 {
         width: 100%;
-        position:absolute;
+        position: absolute;
         top: 0;
     }
-
     nav {
-        position:relative;
+        position: relative;
     }
-
     #profile-pic {
         left: 40%;
     }
-
     figure h2 {
-        width:100%;
-        text-align:center;
+        width: 100%;
+        text-align: center;
     }
-
     .grid-item {
         grid-column: 1/-1;
     }
